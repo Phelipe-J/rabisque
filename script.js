@@ -59,9 +59,11 @@ canvas.addEventListener("mousedown", (e) => {
     switch(currentTool){
         case tools.BRUSH:
             currentAction = "draw";
+            ctx.beginPath();
             break;
         case tools.ERASER:
             currentAction = "erase";
+            ctx.beginPath();
             break;
         case tools.DRAG:
             startX = e.clientX
