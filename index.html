@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Rabisque</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<div id="customCursor"></div>
+
+<body>
+  <header>
+    <h1>Rabisque</h1>
+
+    <label>Cor: <input type="color" id="colorPicker" value="#000000"></label>
+
+    <div id="quickPalette">
+        <button class="color-btn" style="background-color: #000000;" onclick="setColor('#000000')"></button>
+        <button class="color-btn" style="background-color: #ff0000;" onclick="setColor('#ff0000')"></button>
+        <button class="color-btn" style="background-color: #00ff00;" onclick="setColor('#00ff00')"></button>
+        <button class="color-btn" style="background-color: #0000ff;" onclick="setColor('#0000ff')"></button>
+        <button class="color-btn" style="background-color: #ffff00;" onclick="setColor('#ffff00')"></button>
+    </div>
+
+    <label>
+      Tamanho do pincel:
+      <input type="range" id="brushSize" min="1" max="50" value="7" oninput="setBrushSize(this.value)">
+    </label>
+    <button id="drag" onclick="toggleDrag()" aria-label="Arrastar (V)">
+        <img src="icons/hand-icon.png" alt="Arrastar" class="icon-button">
+    </button>
+    <button id="brush" onclick="toggleBrush()" aria-label="Pincel (B)">
+        <img src="icons/brush-icon.png" alt="Pincel" class="icon-button">
+    </button>
+    <button id="eraser" onclick="toggleEraser()", aria-label="Borracha (E)">
+        <img src="icons/eraser-icon.png" alt="Borracha" class="icon-button">
+    </button>
+
+    <div style="margin-left:auto;">
+        <button id="clear" onclick="clearCanvas()" style="background-color: white; margin-right: 20px;">Limpar</button>
+        <button id="save" onclick="saveCanvas()" style="background-color: white;">Salvar</button>
+        <span style="margin-left:auto; margin-right: 20px; font-size: 0.9em; color: #ccc;">
+            Segure <b>Espaço</b> ou <b>Alt</b> para mover o canvas
+        </span>
+    </div>
+
+    
+
+  </header>
+
+  <div class = "canvas-container">
+    <canvas id="tela"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
