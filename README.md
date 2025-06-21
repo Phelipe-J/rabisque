@@ -4,7 +4,7 @@
 
 ---
 
-## Funcionalidas
+## Funcionalidades
 - Ferramenta de pincel com seleção de cor
 - Borracha
 - Arrastar e mover a tela
