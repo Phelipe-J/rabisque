@@ -11,8 +11,6 @@
 - Sistema de desfazer e refazer
 - Opção de salvar a imagem com ou sem fundo
 
----
-
 ## Tecnologias Utilizadas
 - HTML5
 - CSS3
@@ -21,12 +19,16 @@
 
 ## Atalhos de teclado
 
-B - Pincel
-E - Borracha
-V - Arrastar
-Espaço/Alt Esquerdo - Arrastar temporariamente
-Ctrl + Z - Desfazer
-Ctrl + Shift + Z - Refazer
+- B - Pincel
+- E - Borracha
+- V - Arrastar
+- Espaço/Alt Esquerdo - Arrastar temporariamente
+- Ctrl + Z - Desfazer
+- Ctrl + Shift + Z - Refazer
+
+## Deploy
+Você pode acessar a versão online aqui:
+[https://phelipe-j.github.io/rabisque/]
 
 ## Possiveis melhorias futuras
 - Ferramenta de zoom
