@@ -284,6 +284,8 @@ function applyCommand(command) {
     if (command.type === "erase") {
         ctx.restore(); // volta ao modo normal
     }
+
+    ctx.beginPath();
 }
 
 function interpolatePoints(p1, p2, maxDistance = 2) {
