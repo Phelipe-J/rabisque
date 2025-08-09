@@ -199,6 +199,7 @@ function draw(event) {
 
     ctx.lineWidth = brushSize;
     ctx.lineCap = "round";
+    ctx.lineJoin = "round";
     ctx.strokeStyle = color;
 
     ctx.lineTo(x, y);
@@ -243,6 +244,7 @@ function saveCheckpoint() {
 }
 
 function redrawFromCheckpoint() {
+    ctx.clearRect(0, 0, canvas.width, canvasHeight);
     const index = checkpoints.slice().reverse().find(c => c.at <= commandHistory.length);
     const checkpoint = index || checkpoints[0]; // pega o checkpoint mais recente ou o primeiro se não houver
     if (checkpoint) {
@@ -264,6 +266,7 @@ function applyCommand(command) {
 
     ctx.lineWidth = command.size;
     ctx.lineCap = "round";
+    ctx.lineJoin = "round";
     ctx.strokeStyle = command.color;
     ctx.fillStyle = command.color;
 
@@ -352,6 +355,7 @@ function erase(event){
 
     ctx.lineWidth = brushSize;
     ctx.lineCap = "round";
+    ctx.lineJoin = "round";
     ctx.strokeStyle = "rgba(0, 0, 0, 1)"; // cor transparente para apagar
 
     ctx.lineTo(x, y);
